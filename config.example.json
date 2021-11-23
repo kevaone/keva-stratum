@@ -1,4 +1,5 @@
 {
+	"isKeva": true,
 	"address": "YOUR-ADDRESS-NO-EXCHANGE",
 	"bypassAddressValidation": true,
 	"bypassShareValidation": true,
@@ -51,7 +52,9 @@
 			"name": "Main",
 			"host": "127.0.0.1",
 			"port": 18081,
-			"timeout": "10s"
+			"timeout": "10s",
+			"user": "yourusername",
+			"password": "yourpassword"
 		}
 	],
 
