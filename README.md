@@ -34,7 +34,7 @@ Install Golang and required packages:
 
 Clone stratum:
 
-    git clone https://github.com/kevacoin-project/keva-stratum.git
+    git clone https://github.com/kevaone/keva-stratum.git
     cd keva-stratum
 
 Build stratum:
@@ -62,7 +62,7 @@ Install Golang and required packages:
 
 Clone stratum:
 
-    git clone https://github.com/kevacoin-project/keva-stratum.git
+    git clone https://github.com/kevaone/keva-stratum.git
     cd keva-stratum
 
 Build stratum:
@@ -109,7 +109,7 @@ Just like Monero, keva-stratum can be built on Windows using the MinGW toolchain
 
 Clone stratum:
 
-    git clone https://github.com/kevacoin-project/keva-stratum.git
+    git clone https://github.com/kevaone/keva-stratum.git
     cd keva-stratum
 
 Build stratum:
@@ -146,7 +146,7 @@ Configuration is self-describing, just copy *config.example.json* to *config.jso
 {
   "isKeva": true,
   // Address for block rewards
-  "address": "YOUR-ADDRESS-NOT-EXCHANGE",    // Use 'kevacoin-cli getnewaddress' to get the address
+  "address": "YOUR-ADDRESS-NOT-EXCHANGE", // Use 'kevacoin-cli getnewaddress' to get the address
   // Don't validate address
   "bypassAddressValidation": true,
   // Don't validate shares
@@ -197,8 +197,8 @@ Configuration is self-describing, just copy *config.example.json* to *config.jso
       "host": "127.0.0.1",
       "port": 18081,
       "timeout": "10s",
-      "user": "yourusername",                 //The value should be the same as defined in kevacoin.config
-      "password": "yourpassword"              //The value should be the same as defined in kevacoin.config
+      "user": "yourusername",     //The value should be the same as defined in kevacoin.config
+      "password": "yourpassword"  //The value should be the same as defined in kevacoin.config
     }
   ]
 }
