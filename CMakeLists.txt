@@ -5,7 +5,13 @@ project(keva-stratum)
 add_subdirectory(cnutil)
 
 add_custom_target(build ALL DEPENDS cnutil COMMAND go get -d ../. COMMAND go build ..)
-add_custom_target(copy_www ALL COMMAND cp -r ${CMAKE_CURRENT_SOURCE_DIR}/www .)
+
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/build/www)
+    add_custom_command(TARGET build PRE_BUILD COMMAND rm -r ${CMAKE_CURRENT_SOURCE_DIR}/build/www)
+endif()
+
+add_custom_command(TARGET build POST_BUILD COMMAND cp -r ${CMAKE_CURRENT_SOURCE_DIR}/www .)
+add_custom_command(TARGET build POST_BUILD COMMAND cp -n ${CMAKE_CURRENT_SOURCE_DIR}/config.example.json config.json)
 
 if(MSYS)
     add_custom_target(copy ALL COMMAND cp cnutil/libcnutil.dll .)
