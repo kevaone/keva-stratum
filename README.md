@@ -87,7 +87,7 @@ If you are using Windows Linux Subsystem (WLS), check the instruction under Linu
 
 Just like Monero, keva-stratum can be built on Windows using the MinGW toolchain within [MSYS2](https://www.msys2.org/) environment.
 
-- Download and install the [MSYS2 installer](https://www.msys2.org/), either the 64-bit or the 32-bit package, depending on your system.
+- Download and install the [MSYS2 installer](https://www.msys2.org/)
 - Open the MSYS shell via the application `mingw32` (for 32-bit Windows) or `mingw64` (for 64-bit windows).
 - Update packages using pacman:
 
@@ -103,9 +103,15 @@ Just like Monero, keva-stratum can be built on Windows using the MinGW toolchain
 
       pacman -S mingw-w64-i686-toolchain make mingw-w64-i686-cmake mingw-w64-i686-boost mingw-w64-i686-openssl mingw-w64-i686-zeromq mingw-w64-i686-libsodium mingw-w64-i686-hidapi
 
-    Install Golang:
+    Install Golang and git:
 
-      pacman -S mingw-w64-x86_64-go
+      pacman -S mingw-w64-x86_64-go git
+
+Close and reopen the MSYS shell.
+
+Set GO111MODULE to `auto`:
+      
+      export GO111MODULE=auto
 
 Clone stratum:
 
@@ -122,7 +128,7 @@ Build stratum:
 
 Check the output of `cmake` and make sure it finds the `OpenSSL` library, and the library is **inside** your `MSYS2` directory. e.g. the output should be something like this:
 
-    -- Found OpenSSL: C:/msys64/mingw64/lib/libcrypto.dll.a (found version "1.1.1b")
+    -- Found OpenSSL: C:/msys64/mingw64/lib/libcrypto.dll.a (found version "3.1.3")
 
 If the `OpenSSL` is not inside your `MSYS2` directory, `cmake` is not using the correct `OpenSSL` library. e.g.
 
