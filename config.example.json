@@ -3,18 +3,13 @@
 	"address": "YOUR-ADDRESS-NO-EXCHANGE",
 	"bypassAddressValidation": false,
 	"bypassShareValidation": false,
-
 	"threads": 2,
-
 	"estimationWindow": "15m",
 	"luckWindow": "24h",
 	"largeLuckWindow": "72h",
-
 	"blockRefreshInterval": "1s",
-
 	"stratum": {
 		"timeout": "15m",
-
 		"listen": [
 			{
 				"host": "0.0.0.0",
@@ -36,7 +31,6 @@
 			}
 		]
 	},
-
 	"frontend": {
 		"enabled": true,
 		"listen": "0.0.0.0:8082",
@@ -44,9 +38,7 @@
 		"password": "",
 		"hideIP": false
 	},
-
 	"upstreamCheckInterval": "5s",
-
 	"upstream": [
 		{
 			"name": "Main",
@@ -57,7 +49,6 @@
 			"password": "yourpassword"
 		}
 	],
-
 	"newrelicEnabled": false,
 	"newrelicName": "MyStratum",
 	"newrelicKey": "SECRET_KEY",
