@@ -20,12 +20,10 @@ High performance CryptoNote mining stratum with Web-interface written in Golang.
 
 Dependencies:
 
-  * go-1.6
+  * go-1.6<1.8
   * Everything required to build [Monero](https://github.com/monero-project/monero) or [Kevacoin](https://github.com/kevacoin-project/kevacoin). Follow their build instructions to install the dependencies for your system.
 
-### Linux
-
-Use Ubuntu 16.04 LTS or 18.04 LTS, or Ubuntu on Windows Linux Subsystem(WLS).
+### Ubuntu or Windows Linux Subsystem(WLS).
 
 Install Golang and required packages:
 
@@ -91,7 +89,7 @@ Just like Monero, keva-stratum can be built on Windows using the MinGW toolchain
 - Open the MSYS shell via the application `mingw32` (for 32-bit Windows) or `mingw64` (for 64-bit windows).
 - Update packages using pacman:
 
-        pacman -Syu
+    pacman -Syu
 
 - Install dependencies:
 
@@ -111,7 +109,7 @@ Close and reopen the MSYS shell.
 
 Set GO111MODULE to `auto`:
       
-      export GO111MODULE=auto
+    export GO111MODULE=auto
 
 Clone stratum:
 
