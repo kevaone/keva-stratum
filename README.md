@@ -144,6 +144,15 @@ Run stratum:
 
 ## Configuration (config.json)
 
+Kevacoin (kevacoin-qt or kevacoind), needs to be launched with RPC enabled. To do so a bare minimum of configuration entries need set. These can be either be passed in via command line or placed within config:
+
+    server=1
+    rpcuser=<username>
+    rpcpassword=<password>
+    rpcallowip=<ipaddress/range, local example: 127.0.0.0/24>
+
+* Be aware RPC grants wallet access! Recommendation is to run copy of Kevacoin specific for RPC usage with wallet disabled and one for wallet usage. Always set random usernames and passwords and configure overall network when possible to restrict RPC traffic.
+
 Configuration is self-describing, just copy *config.example.json* to *config.json* and run stratum with path to config file as 1st argument.
 
 ```javascript
@@ -199,7 +208,7 @@ Configuration is self-describing, just copy *config.example.json* to *config.jso
     {
       "name": "Main",
       "host": "127.0.0.1",
-      "port": 18081,
+      "port": 9337,
       "timeout": "10s",
       "user": "yourusername",     //The value should be the same as defined in kevacoin.config
       "password": "yourpassword"  //The value should be the same as defined in kevacoin.config
